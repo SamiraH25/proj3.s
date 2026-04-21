@@ -119,3 +119,8 @@ call_get_int:
     lw $t0, 4($sp)          # Restore input pointer
     lw $ra, 8($sp)          # Restore return address
     addi $sp, $sp, 12
+
+    addi $t1, $t1, 4        # Move to next array slot
+    addi $s4, $s4, 1        # Increment return count
+    j process_chunk_loop
+
