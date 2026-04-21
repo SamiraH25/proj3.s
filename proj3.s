@@ -176,3 +176,7 @@ assign_p3:
     add $t9, $t9, $s7       # Even sum (H)
     addi $s6, $s6, 1        # H digit counter
     j next_char_p3
+
+odd_p3:
+    add $t8, $t8, $s7       # Odd sum (G)
+    addi $s5, $s5, 1        # G digit counter
