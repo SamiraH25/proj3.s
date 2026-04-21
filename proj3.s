@@ -48,3 +48,8 @@ skip_semi:
      
      li $t8, -1
      beq $t7, $t8, print_nan
+
+     li $v0, 1              # Print Integer
+     move $a0, $t7
+     syscall
+     j next_val
