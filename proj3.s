@@ -124,3 +124,6 @@ call_get_int:
     addi $s4, $s4, 1        # Increment return count
     j process_chunk_loop
 
+end_process:
+    sw $s4, 0($sp)          # Return substring count via stack
+    jr $ra
