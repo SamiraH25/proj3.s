@@ -109,3 +109,9 @@ call_get_int:
     sw $ra, 8($sp)
     sw $t0, 4($sp)
     sw $t1, 0($sp)
+    la $a0, substring
+    jal get_substr_int      # Call calculation subroutine
+    
+    lw $t1, 0($sp)          # Restore array pointer
+    sw $v0, 0($t1)          # Save get_substr_int result into array
+    
