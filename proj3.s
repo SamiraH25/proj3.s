@@ -20,3 +20,9 @@ main:
      sw $t0, 4($sp)         # Push string address
      la $t1, strint
      sw $t1, 0($sp)         # Push array address
+
+     jal process_string     # Call subprogram
+
+     
+     lw $s0, 0($sp)         # $s0 = Number of substrings
+     addi $sp, $sp, 8       # Restore stack pointer
