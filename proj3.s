@@ -67,3 +67,8 @@ next_val:
 exit_progam:
      li $v0, 10             # Exit syscall
      syscall 
+
+process_string:
+    lw $t0, 4($sp)          # Get input address from stack
+    lw $t1, 0($sp)          # Get array address from stack
+    li $s4, 0               # Counter for substrings processed
