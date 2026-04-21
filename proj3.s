@@ -53,3 +53,8 @@ skip_semi:
      move $a0, $t7
      syscall
      j next_val
+
+print_nan:
+     li $v0, 4              # Print "NaN"
+     la $a0, nan_str
+     syscall
