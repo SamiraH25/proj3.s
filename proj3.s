@@ -184,3 +184,9 @@ odd_p3:
 next_char_p3:
     addi $a0, $a0, 1
     j loop_chars
+
+done_calc:
+    beq $s5, $zero, return_nan
+    beq $s6, $zero, return_nan
+    mul $v0, $t8, $t9       # Return G * H
+    jr $ra
