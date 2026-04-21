@@ -154,3 +154,12 @@ check_low:
     bgt $t5, $t7, check_up
     addi $s7, $t5, -87     
     j assign_p3
+
+check_up:
+   
+    li $t6, 65
+    li $t7, 80
+    blt $t5, $t6, skip_p3
+    bgt $t5, $t7, skip_p3
+    addi $s7, $t5, -55      
+    j assign_p3
