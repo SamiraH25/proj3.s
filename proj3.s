@@ -31,3 +31,12 @@ main:
      li $s1, 0              # Loop index
      la $s2, strint         # Array pointer
      li $s3, 0              # Semicolon flag
+
+print_loop:
+     beq $s1, $s0, exit_progam # Stop when all substrings processed
+     
+     
+     beq $s3, $zero, skip_semi
+     li $v0, 4
+     la $a0, semi
+     syscall
