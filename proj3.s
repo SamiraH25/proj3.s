@@ -101,3 +101,11 @@ pad_sub:
     addi $t3, $t3, 1
     addi $t2, $t2, 1
     blt $t2, 10, pad_sub
+
+call_get_int:
+    sb $zero, 0($t3)        # Null terminate substring
+    
+    addi $sp, $sp, -12
+    sw $ra, 8($sp)
+    sw $t0, 4($sp)
+    sw $t1, 0($sp)
