@@ -88,4 +88,9 @@ fill_sub:
     li $t5, 10
     beq $t4, $t5, pad_sub
     sb $t4, 0($t3)
-    
+
+    addi $t0, $t0, 1
+    addi $t3, $t3, 1
+    addi $t2, $t2, 1
+    blt $t2, 10, fill_sub
+    j call_get_int
