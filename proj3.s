@@ -94,3 +94,10 @@ fill_sub:
     addi $t2, $t2, 1
     blt $t2, 10, fill_sub
     j call_get_int
+
+pad_sub:
+    li $t5, 32              # Pad with space
+    sb $t5, 0($t3)
+    addi $t3, $t3, 1
+    addi $t2, $t2, 1
+    blt $t2, 10, pad_sub
