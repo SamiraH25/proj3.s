@@ -127,3 +127,10 @@ call_get_int:
 end_process:
     sw $s4, 0($sp)          # Return substring count via stack
     jr $ra
+    
+get_substr_int:
+    li $v1, 0               # Position counter
+    li $t8, 0               # G Sum
+    li $t9, 0               # H Sum
+    li $s5, 0               # G count
+    li $s6, 0               # H count
