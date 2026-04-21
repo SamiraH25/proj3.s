@@ -138,3 +138,10 @@ get_substr_int:
 loop_chars:
     lb $t5, 0($a0)          # Load char from substring
     beq $t5, $zero, done_calc
+
+    li $t6, 48
+    li $t7, 57
+    blt $t5, $t6, check_low
+    bgt $t5, $t7, check_low
+    sub $s7, $t5, $t6
+    j assign_p3
