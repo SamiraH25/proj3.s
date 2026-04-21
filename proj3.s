@@ -72,3 +72,9 @@ process_string:
     lw $t0, 4($sp)          # Get input address from stack
     lw $t1, 0($sp)          # Get array address from stack
     li $s4, 0               # Counter for substrings processed
+
+process_chunk_loop:
+    lb $t4, 0($t0)          # Check for end of input
+    beq $t4, $zero, end_process
+    li $t5, 10              # Newline check
+    beq $t4, $t5, end_process
