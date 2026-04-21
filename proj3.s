@@ -180,3 +180,7 @@ assign_p3:
 odd_p3:
     add $t8, $t8, $s7       # Odd sum (G)
     addi $s5, $s5, 1        # G digit counter
+
+next_char_p3:
+    addi $a0, $a0, 1
+    j loop_chars
