@@ -134,3 +134,7 @@ get_substr_int:
     li $t9, 0               # H Sum
     li $s5, 0               # G count
     li $s6, 0               # H count
+
+loop_chars:
+    lb $t5, 0($a0)          # Load char from substring
+    beq $t5, $zero, done_calc
