@@ -190,3 +190,7 @@ done_calc:
     beq $s6, $zero, return_nan
     mul $v0, $t8, $t9       # Return G * H
     jr $ra
+
+return_nan:
+    li $v0, -1              # Return NaN flag
+    jr $ra
