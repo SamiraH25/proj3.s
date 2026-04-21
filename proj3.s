@@ -63,3 +63,7 @@ next_val:
      addi $s1, $s1, 1       # Increment index
      addi $s2, $s2, 4       # Increment array pointer 
      j print_loop
+
+exit_progam:
+     li $v0, 10             # Exit syscall
+     syscall 
