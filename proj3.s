@@ -145,3 +145,12 @@ loop_chars:
     bgt $t5, $t7, check_low
     sub $s7, $t5, $t6
     j assign_p3
+
+check_low:
+
+    li $t6, 97
+    li $t7, 112
+    blt $t5, $t6, check_up
+    bgt $t5, $t7, check_up
+    addi $s7, $t5, -87     
+    j assign_p3
