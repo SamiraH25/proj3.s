@@ -78,3 +78,6 @@ process_chunk_loop:
     beq $t4, $zero, end_process
     li $t5, 10              # Newline check
     beq $t4, $t5, end_process
+
+    li $t2, 0               # Reset chunk counter
+    la $t3, substring       # Substring buffer
