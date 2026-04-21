@@ -14,3 +14,9 @@ main:
      la $a0, input_buffer  
      li $a1, 1001        
      syscall 
+
+     addi $sp, $sp, -8      # Allocate stack for 2 args
+     la $t0, input_buffer
+     sw $t0, 4($sp)         # Push string address
+     la $t1, strint
+     sw $t1, 0($sp)         # Push array address
