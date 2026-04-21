@@ -26,3 +26,8 @@ main:
      
      lw $s0, 0($sp)         # $s0 = Number of substrings
      addi $sp, $sp, 8       # Restore stack pointer
+
+     
+     li $s1, 0              # Loop index
+     la $s2, strint         # Array pointer
+     li $s3, 0              # Semicolon flag
