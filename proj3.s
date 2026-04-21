@@ -58,3 +58,8 @@ print_nan:
      li $v0, 4              # Print "NaN"
      la $a0, nan_str
      syscall
+
+next_val:
+     addi $s1, $s1, 1       # Increment index
+     addi $s2, $s2, 4       # Increment array pointer 
+     j print_loop
