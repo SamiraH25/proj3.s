@@ -81,3 +81,11 @@ process_chunk_loop:
 
     li $t2, 0               # Reset chunk counter
     la $t3, substring       # Substring buffer
+
+fill_sub:
+    lb $t4, 0($t0)
+    beq $t4, $zero, pad_sub
+    li $t5, 10
+    beq $t4, $t5, pad_sub
+    sb $t4, 0($t3)
+    
