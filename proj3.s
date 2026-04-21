@@ -163,3 +163,8 @@ check_up:
     bgt $t5, $t7, skip_p3
     addi $s7, $t5, -55      
     j assign_p3
+
+skip_p3:
+    addi $v1, $v1, 1        # Increment position counter for invalid char
+    addi $a0, $a0, 1        # Next char in substring
+    j loop_chars
