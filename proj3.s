@@ -168,3 +168,11 @@ skip_p3:
     addi $v1, $v1, 1        # Increment position counter for invalid char
     addi $a0, $a0, 1        # Next char in substring
     j loop_chars
+
+assign_p3:
+    addi $v1, $v1, 1        # Increment position counter
+    andi $t6, $v1, 1        # Parity check
+    beq $t6, 1, odd_p3
+    add $t9, $t9, $s7       # Even sum (H)
+    addi $s6, $s6, 1        # H digit counter
+    j next_char_p3
