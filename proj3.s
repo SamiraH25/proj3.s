@@ -40,3 +40,11 @@ print_loop:
      li $v0, 4
      la $a0, semi
      syscall
+
+skip_semi:
+     li $s3, 1              # Enable semicolons after first print
+
+     lw $t7, 0($s2)         # Load current integer from array
+     
+     li $t8, -1
+     beq $t7, $t8, print_nan
